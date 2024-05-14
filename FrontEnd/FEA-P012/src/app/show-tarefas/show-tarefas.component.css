@@ -1,9 +1,11 @@
+/* Reset de estilos para lista */
 .task-list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* Estilo básico para cada item da lista de tarefas */
 .task-item {
   padding: 10px;
   margin: 10px 0;
@@ -12,18 +14,21 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   font-size: 1.2em;
   color: #ff7f50;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efeito hover no item da lista */
 .task-item:hover {
   background-color: #ffe4b5;
 }
 
+/* Efeito ativo (clicado) no item da lista */
 .task-item:active {
   background-color: #ffdead;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 }
 
+/* Estilos básicos para botões */
 .button {
   margin-left: 10px;
   padding: 5px 10px;
@@ -32,33 +37,38 @@
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   outline: none;
 }
 
+/* Estilo para botão de remoção */
 .button-remove {
   color: #fff;
   background-color: #ff0000;
 }
 
+/* Efeito hover no botão de remoção */
 .button-remove:hover {
   background-color: #cc0000;
 }
 
+/* Efeito ativo (clicado) no botão de remoção */
 .button-remove:active {
   background-color: #990000;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
 }
 
+/* Estilo para botão de atualização */
 .button-update {
   color: #fff;
   background-color: orange;
 }
 
+/* Efeito hover no botão de atualização */
 .button-update:hover {
   background-color: rgb(180, 117, 0);
 }
 
+/* Efeito ativo (clicado) no botão de atualização */
 .button-update:active {
   background-color: rgb(97, 63, 0);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);

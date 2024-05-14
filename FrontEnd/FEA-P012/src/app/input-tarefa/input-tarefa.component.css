@@ -1,40 +1,46 @@
+/* Estilos para o contêiner do campo de entrada e botão */
 .task-input {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 20px;
-    background-color: #ffebcd;
-    border-radius: 10px;
-  }
-  
-  .task-field {
-    padding: 10px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    flex-grow: 1;
-  }
-  
-  .task-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #fff;
-    background-color: #ff7f50;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    outline: none;
-  }
-  
-  .task-button:hover {
-    background-color: #ff6347;
-  }
-  
-  .task-button:active {
-    background-color: #ff4500;
-    box-shadow: 0 2px 2px rgba(0,0,0,0.15);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: #ffebcd;
+  border-radius: 10px;
+}
+
+/* Estilos para o campo de entrada */
+.task-field {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  flex-grow: 1;
+  outline: none; /* Remover a borda ao focar */
+}
+
+/* Estilos para o botão */
+.task-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #ff7f50;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Remover o contorno ao focar */
+}
+
+/* Efeito hover no botão */
+.task-button:hover {
+  background-color: #ff6347;
+}
+
+/* Efeito ativo (clicado) no botão */
+.task-button:active {
+  background-color: #ff4500;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+}
