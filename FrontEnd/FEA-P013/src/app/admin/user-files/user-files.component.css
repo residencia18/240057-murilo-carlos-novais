@@ -1,0 +1,59 @@
+:host {
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff; /* Cor de fundo branco */
+    border-radius: 8px; /* Borda arredondada */
+}
+
+.profile .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ced4da; /* Cor de fundo cinza */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .info div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 7.5px 30px;
+    border-bottom: 1px solid #dee2e6; /* Cor da borda inferior */
+}
+
+.profile .info div:first-child {
+    border-top: 1px solid #dee2e6; /* Cor da borda superior */
+}
+
+.app-table .head th {
+    width: 49%;
+    color: #495057; /* Cor do texto do cabeçalho */
+}
+
+.app-table .head .options-column {
+    width: 1%;
+}
+
+@media screen and (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+    }
+
+    .profile .info {
+        width: 100%;
+    }
+
+    .profile .info div {
+        padding: 7.5px 0;
+    }
+}

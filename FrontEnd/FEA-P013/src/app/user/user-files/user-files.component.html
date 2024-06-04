@@ -1,0 +1,19 @@
+<div>
+    <h2>Lista de Arquivos</h2>
+    <div class="files">
+        <p-table [value]="files" class="app-table">
+            <ng-template pTemplate="header">
+                <tr class="head">
+                    <th>Nome do Arquivo</th>
+                    <th>Data</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-file>
+                <tr>
+                    <td data-label="Nome"><a [href]="file.url" target="_blank">{{ file.originalName }}</a></td>
+                    <td data-label="Data">{{ file.createdAt }}</td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>

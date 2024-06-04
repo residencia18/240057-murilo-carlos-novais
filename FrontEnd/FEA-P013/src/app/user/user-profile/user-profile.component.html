@@ -1,0 +1,19 @@
+<div class="profile">
+    <div class="image" aria-label="Profile Image">
+        {{ user.name | initials }}
+    </div>
+    <div class="info">
+        <div class="info-item">
+            <strong>Nome:</strong> <span>{{ user.name }}</span>
+        </div>
+        <div class="info-item">
+            <strong>Email:</strong> <span>{{ user.mail }}</span>
+        </div>
+        <div class="info-item">
+            <strong>Nascimento:</strong> <span>{{ user.birthDate | date: 'dd/MM/yyyy' }}</span>
+        </div>
+        <div class="info-item">
+            <strong>Altura:</strong> <span>{{ user.height }}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<p-dialog header="Cadastro de Usuário" [closable]="false" [modal]="true" [visible]="visible()" class="upload-container" [breakpoints]="{ '1199px': '75vw', '600px': '90vw' }" [style]="{ width: '50vw', maxWidth: '500px' }">
+    <div class="register-user-body">
+        <form [formGroup]="registerUserForm">
+            <div class="form-group">
+                <div class="p-fluid">
+                    <label for="name">Nome</label>
+                    <input id="name" formControlName="name" pInputText type="text" placeholder="Nome da pessoa" />
+                </div>
+                <div class="p-fluid">
+                    <label for="mail">Email</label>
+                    <input id="mail" formControlName="mail" pInputText type="email" placeholder="E-mail da pessoa" />
+                </div>
+                <div class="p-fluid">
+                    <label for="birthDate">Data de Nascimento</label>
+                    <input id="birthDate" formControlName="birthDate" pInputText type="date" placeholder="Data de Nascimento da pessoa" />
+                </div>
+                <div class="p-fluid">
+                    <label for="height">Altura (em metros)</label>
+                    <input id="height" formControlName="height" pInputText type="number" placeholder="Altura da pessoa" />
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="register-user-actions p-fluid">
+        <p-button label="Cancelar" (click)="visible.set(false)" styleClass="p-button-secondary" />
+        <p-button label="Cadastrar" (click)="addUser()" />
+    </div>
+</p-dialog>
+<p-toast position="top-center"></p-toast>

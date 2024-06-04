@@ -1,0 +1,106 @@
+:host {
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Perfil Container */
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.profile:hover {
+    transform: translateY(-5px);
+}
+
+/* Imagem do Perfil */
+.profile .image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #cfd8dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 2px solid #007BFF;
+    font-size: 24px;
+    color: #ffffff;
+    background-color: #007BFF;
+    font-weight: bold;
+}
+
+/* Informações do Perfil */
+.profile .info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.profile .info div {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.profile .info div:first-child {
+    border-top: 1px solid #e0e0e0;
+}
+
+.profile .info div:last-child {
+    border-bottom: none;
+}
+
+.profile .info div span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Tabela */
+.app-table .head th {
+    width: 49%;
+    padding: 10px;
+    background-color: #f0f0f0;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.app-table .head .options-column {
+    width: 2%;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .profile {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile .info {
+        width: 100%;
+    }
+
+    .profile .info div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .app-table .head th, 
+    .app-table .head .options-column {
+        width: 100%;
+        display: block;
+        text-align: left;
+    }
+}

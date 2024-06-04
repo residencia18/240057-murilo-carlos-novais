@@ -1,0 +1,43 @@
+/* Estilo para o componente principal */
+:host {
+    display: block; /* Alterado para 'block' para melhor consistência */
+    width: 100%;
+}
+
+/* Estilos para as ações */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Adicionado alinhamento vertical */
+    margin-bottom: 20px; /* Aumentei a margem inferior para melhor espaçamento */
+}
+
+/* Estilos para as colunas da tabela */
+.app-table .head th {
+    width: 30%; /* Largura ajustada para 30% */
+}
+
+.app-table .head .options-column {
+    width: 1%; /* Largura ajustada para 1% */
+}
+
+/* Estilos para as opções */
+.options div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Aumentei o espaçamento entre os elementos */
+}
+
+/* Estilos para o diálogo de confirmação de exclusão de usuário */
+.confirm-delete-user-dialog .p-dialog-mask .p-confirm-dialog .p-dialog-header {
+    border-bottom: 1px solid black;
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 600px) {
+    .actions {
+        flex-direction: column; /* Alterado para coluna em telas pequenas */
+        gap: 20px; /* Aumentei o espaçamento entre os elementos */
+    }
+}

@@ -1,0 +1,43 @@
+<div class="user-profile">
+    <div class="profile">
+        <div class="image">
+            BR
+        </div>
+        <div class="info">
+            <div><strong>Nome:</strong> <span>{{ user.name }}</span></div>
+            <div><strong>Nascimento:</strong> <span>{{ user.birthDate | date: 'dd/MM/yyyy' }}</span></div>
+            <div><strong>Altura:</strong> <span>{{ user.height }}</span></div>
+        </div>
+    </div>
+    <div class="user-files">
+        <p-table [value]="files" class="app-table">
+            <ng-template pTemplate="header">
+                <tr class="head">
+                    <th>Nome do Arquivo</th>
+                    <th>Data</th>
+                    <th class="options-column">Opções</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-file>
+                <tr>
+                    <td data-label="Nome"><a [href]="file.url" target="_blank">{{ file.originalName }}</a></td>
+                    <td data-label="Data">{{ file.createdAt | date: 'dd/MM/yyyy' }}</td>
+                    <td class="options">
+                        <div>
+                            <p-button class="p-fluid option" aria-label="Excluir" icon="pi pi-trash" iconPos="right" severity="danger" (click)="confirmDeleteFile(file.id, file.name, file.originalName)"></p-button>
+                        </div>
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+</div>
+
+<p-confirmDialog #confirmDeleteFileDialog [breakpoints]="{ '1199px': '40vw', '600px': '85vw' }" class="confirm-delete-file-dialog" header="Confirmar Exclusão">
+    <ng-template pTemplate="footer">
+        <button type="button" pButton label="Cancelar" (click)="confirmDeleteFileDialog.reject()"></button>
+        <button type="button" pButton label="Excluir" (click)="confirmDeleteFileDialog.accept()" severity="danger"></button>
+    </ng-template>
+</p-confirmDialog>
+
+<p-toast position="top-center"></p-toast>

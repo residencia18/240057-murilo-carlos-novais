@@ -1,0 +1,82 @@
+/* Estilo para o container principal */
+.main-container {
+    display: flex;
+    width: 100vw;
+    height: 100%;
+}
+
+/* Estilo para o menu lateral */
+.sidebar-menu {
+    height: 100%;
+}
+
+/* Botão para mostrar o menu em telas pequenas */
+.show-menu-button {
+    display: none;
+}
+
+/* Estilo para o conteúdo principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+/* Estilo para telas médias */
+@media screen and (max-width: 849px) {
+    .sidebar-menu {
+        position: absolute;
+        z-index: 99;
+    }
+}
+
+/* Estilo para telas pequenas */
+@media screen and (max-width: 600px) {
+    .main-container {
+        height: unset;
+    }
+
+    .container {
+        overflow: unset;
+    }
+
+    .sidebar-menu {
+        left: -200px;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar-menu-open {
+        left: 0;
+    }
+
+    .spacer {
+        height: 40px;
+    }
+
+    /* Botão para mostrar o menu */
+    .show-menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        color: white;
+        background-color: #3498db !important; /* Mudança de cor para azul */
+        border-color: #3498db !important; /* Mudança de cor para azul */
+        border-radius: 6px;
+        left: 0;
+        transition: left 0.3s ease;
+    }
+
+    .menuOpen {
+        position: absolute;
+        top: 30px;
+        left: 185px;
+        z-index: 999;
+    }
+}
